@@ -31,11 +31,12 @@
         <noscript>You need to enable JavaScript to run this app.</noscript>
         
         <!-- Hidden Netlify Form for pre-rendering -->
-        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="name" />
           <input type="email" name="email" />
           <input type="text" name="company" />
-          <input type="text" name="project-type" />
+          <input type="text" name="project" />
           <textarea name="message"></textarea>
         </form>
         

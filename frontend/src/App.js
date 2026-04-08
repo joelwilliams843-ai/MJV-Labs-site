@@ -842,7 +842,7 @@ const ContactSection = () => {
                     <label className="block text-sm font-medium text-slate-700 mb-1.5">What are you looking to build? *</label>
                     <Input
                       type="text"
-                      name="project-type"
+                      name="project"
                       placeholder="e.g., Mobile app, Website, Dashboard"
                       required
                       className="h-11 border-slate-200 focus:border-[#0D9488] focus:ring-[#0D9488]/20 rounded-xl"
