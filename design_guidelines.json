@@ -1,0 +1,131 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Premium Corporate",
+  "design_philosophy": "High-end product studio aesthetic avoiding all standard template structures. Inspired by Stripe (layout creativity), Linear (precision), and Apple (flow). Emphasizes minimalism, bold typography, functional asymmetry, and a refined corporate feel.",
+  "colors": {
+    "primary": "#1E3A5F",
+    "secondary": "#6B7280",
+    "accent": "#0D9488",
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "surface_alt": "#F1F5F9",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "border": "#E2E8F0"
+  },
+  "typography": {
+    "headings": "Cabinet Grotesk",
+    "headings_fallback": "Outfit, sans-serif",
+    "body": "Manrope",
+    "body_fallback": "Inter, sans-serif",
+    "rules": "Headings must have extremely tight tracking (tracking-tighter). Avoid default bold; use varying weights (light, medium, black) for tension. No standard centering; prioritize optical alignment.",
+    "sizes": {
+      "h1": "text-5xl md:text-6xl+",
+      "h2": "text-3xl md:text-4xl",
+      "h3": "text-xl md:text-2xl",
+      "body": "text-base leading-relaxed"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous spacing. Overlapping elements and bento-style grids.",
+    "scale": "Use 2-3x normal padding. Containers should use p-8, p-12, or p-16.",
+    "grid_mode": "TETRIS GRID (Mode A) for the feature sections to create tension and asymmetry."
+  },
+  "motion_and_interactions": {
+    "philosophy": "Moderate, smooth. No bouncy animations.",
+    "hover": "Subtle translate-y (-translate-y-1), slight shadow increase, and sophisticated hover text colors.",
+    "scroll": "Smooth scroll reveals using Framer Motion (opacity 0 -> 1, y: 20 -> 0) triggered via intersection observers."
+  },
+  "sections": [
+    {
+      "name": "Navigation",
+      "layout": "Sticky, glassmorphic (backdrop-blur-xl bg-white/70) with 1px border-b border-border. z-50.",
+      "components": ["Logo", "Nav Links", "CTA Button"]
+    },
+    {
+      "name": "Hero (Split-screen)",
+      "layout": "grid md:grid-cols-12 gap-8 items-center min-h-[85vh] pt-24",
+      "left_col": "col-span-12 md:col-span-5. Massive H1. Left-aligned text. Two CTAs (Primary accent, Secondary outline).",
+      "right_col": "col-span-12 md:col-span-7 relative. Dynamic UI mock floating. Layered images with framer-motion floating animation (y: [-10, 10]).",
+      "image_requirements": "Use the hero dashboard UI mockup image, add drop-shadow-2xl and rounded-2xl."
+    },
+    {
+      "name": "What We Do (Horizontal Scroll)",
+      "layout": "Overflow-x-auto flex gap-6 pb-8 snap-x",
+      "content": "Interactive cards for Websites, Apps, Product Builds. On hover: ring-2 ring-primary/20 and slight lift.",
+      "components": ["Card", "Icon", "Heading", "Description"]
+    },
+    {
+      "name": "Feature Strip (Zig-Zag)",
+      "layout": "Alternating grid layout. Row 1: Text Left, Image Right. Row 2: Image Left, Text Right.",
+      "content": "Fast builds, Clear pricing, Real deployments. Use 1px borders and large padding.",
+      "image_requirements": "Use abstract tech backgrounds or app mockups for the image side."
+    },
+    {
+      "name": "Services (Interactive Panels)",
+      "layout": "Grid cols-1 md:grid-cols-3 gap-8",
+      "content": "Large tall panels. Website Build $750, Starter App $2,500, Full Build & Scale Custom. High contrast hover states.",
+      "style": "Neumorphic/Tactile variant: 1px subtle border, flat background, strong shadow on hover."
+    },
+    {
+      "name": "Process Timeline",
+      "layout": "Vertical timeline with a connecting line.",
+      "content": "Idea -> Build -> Launch. Use staggered reveal animations. Sticky left label, scrolling right content."
+    },
+    {
+      "name": "What We Build",
+      "layout": "Bento Grid (TETRIS format).",
+      "content": "Showcase mobile apps, dashboards, websites. Images filling the containers with object-cover.",
+      "image_requirements": "Use the mobile app mockups and dashboard mockups."
+    },
+    {
+      "name": "Built for Operators",
+      "layout": "Split section. Left: Operator image. Right: Sharp, authoritative text.",
+      "content": "Speaks to business owners. Tone is precise and no-nonsense.",
+      "image_requirements": "Use the focused business founder image."
+    },
+    {
+      "name": "Final CTA / Contact",
+      "layout": "Centered massive text block with a sleek Shadcn-based form.",
+      "components": ["Shadcn Form", "Input", "Textarea", "Button"],
+      "action": "Email notification via Resend. Ensure validation is present."
+    }
+  ],
+  "components_instructions": {
+    "logo": "Create a CSS-based logo since AI generation failed. Text 'MJV' in Cabinet Grotesk, font-black, tracking-tighter, text-primary. Add a subtle 1px border box around it or a small accent dot in #0D9488.",
+    "buttons": "Primary CTA must use #0D9488 (Teal 600) for background to respect user request but maintain E1 standard. Text white. Hover state must be #0F766E. Secondary CTA should be outline or ghost with text-primary border-border.",
+    "forms": "Use Shadcn Form, Input, and Textarea. Customize to have 1px border-slate-200, focus:ring-primary, subtle radius (rounded-md).",
+    "icons": "Use lucide-react. Stroke width 1.5 for a premium precise feel."
+  },
+  "testing": {
+    "data_testid_rules": "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g., data-testid='contact-submit-button', data-testid='hero-cta')."
+  },
+  "required_packages": [
+    "framer-motion",
+    "lucide-react",
+    "clsx",
+    "tailwind-merge"
+  ],
+  "media": [
+    {
+      "category": "hero_ui_mockup",
+      "url": "https://images.unsplash.com/photo-1634084462412-b54873c0a56d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwbW9kZXJuJTIwc29mdHdhcmUlMjBkYXNoYm9hcmQlMjBVSSUyMGludGVyZmFjZXxlbnwwfHx8fDE3NzU2Njc4MDh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Hero floating dashboard UI"
+    },
+    {
+      "category": "mobile_app_mockup",
+      "url": "https://images.unsplash.com/photo-1695048132790-baebe5b7e975?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxzbGVlayUyMG1vYmlsZSUyMGFwcCUyMGludGVyZmFjZSUyMG1vY2t1cCUyMGZsb2F0aW5nfGVufDB8fHx8MTc3NTY2NzgwOHww&ixlib=rb-4.1.0&q=85",
+      "description": "Mobile app interface for 'What We Build' section"
+    },
+    {
+      "category": "operator_founder",
+      "url": "https://images.unsplash.com/photo-1769071167822-3a7095cc9bbd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwzfHxmb2N1c2VkJTIwYnVzaW5lc3MlMjBmb3VuZGVyJTIwb3BlcmF0b3IlMjBtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzc1NjY3NzkxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Business operator portrait"
+    },
+    {
+      "category": "abstract_tech_background",
+      "url": "https://images.unsplash.com/photo-1634153570366-deda92ecf625?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2OTF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHByZW1pdW0lMjB0ZWNoJTIwY29ycG9yYXRlJTIwYmFja2dyb3VuZCUyMHdoaXRlfGVufDB8fHx8MTc3NTY2NzgwOHww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract white/gray tech background for feature zig-zag"
+    }
+  ]
+}
