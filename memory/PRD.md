@@ -1,55 +1,55 @@
 # MJV Labs Landing Page - PRD
 
 ## Original Problem Statement
-Build a custom-designed, high-end landing page for MJV Labs that visually proves we can build real products — not cookie-cutter sites. Must avoid all standard template structures and use asymmetry, split sections, alternating layouts, and layered content blocks.
+Build a custom-designed, high-end landing page for MJV Labs that proves the company builds real products. Must NOT feel like a template. Features: Netlify Forms, FairFare case study, Project Calculator, interactive service panels.
 
 ## User Personas
-- **Business Owners/Operators**: Non-technical entrepreneurs who want professional software built fast without complexity
+- **Business Owners/Operators**: Non-technical entrepreneurs wanting professional software
 - **Startup Founders**: Looking for MVP development with clear pricing
 - **Agency Clients**: Seeking white-label product development
 
-## Core Requirements (Static)
-- Premium enterprise feel with white/light background
-- Deep blue (#1E3A5F) primary, teal (#0D9488) accent
-- Moderate animations (scroll reveals, hover effects)
-- Contact form with Resend email integration
-- Mobile responsive
-- NO template signals or generic card layouts
-
-## What's Been Implemented (v1 - April 8, 2026)
-- ✅ Split-screen hero with floating UI mockups, stats card, code snippet
-- ✅ Interactive service strip with 3 expandable panels (hover effects)
-- ✅ What We Build bento grid visual proof section
-- ✅ Process timeline on dark background (Discovery → Design & Build → Launch)
-- ✅ Built for Operators split section
-- ✅ Premium contact form with Resend integration
+## What's Been Implemented (v2 - April 8, 2026)
+- ✅ Premium hero with FairFare app mockup (real product UI, not stock)
+- ✅ FairFare case study section with phone mockup and "Live Product" badge
+- ✅ Interactive expandable service panels (gradient backgrounds on expand)
+- ✅ Project Calculator with dynamic pricing estimates
+- ✅ Netlify Forms contact form (name, email, company, project-type, timeline, budget, message)
+- ✅ "Working version in days, not months" messaging
 - ✅ Custom MJV Labs logo and favicon
-- ✅ Asymmetric layouts throughout
-- ✅ Emergent badge hidden
-- ✅ Backend /api/contact endpoint saving to MongoDB
+- ✅ Reduced spacing for connected feel
+- ✅ Mobile responsive design
 
 ## Architecture
 - **Frontend**: React 19 + Framer Motion + Tailwind CSS + Shadcn/UI
-- **Backend**: FastAPI + MongoDB
-- **Email**: Resend integration (requires API key for production)
+- **Forms**: Netlify Forms (static deployment ready)
+- **Hosting**: Netlify-ready (no backend required)
+
+## Netlify Deployment Settings
+| Field | Value |
+|-------|-------|
+| Base directory | `frontend` |
+| Build command | `yarn build` |
+| Publish directory | `frontend/build` |
 
 ## Prioritized Backlog
-### P0 (Must Have)
-- [Done] Core landing page sections
-- [Done] Contact form functionality
+### P0 (Done)
+- [x] Core landing page with all sections
+- [x] FairFare case study
+- [x] Project Calculator
+- [x] Netlify Forms contact
 
 ### P1 (Should Have)
-- [ ] Resend API key configuration for email notifications
-- [ ] Add portfolio/case study examples with real project images
-- [ ] Testimonials section
+- [ ] Additional case studies (2-3 more projects)
+- [ ] Client testimonials section
+- [ ] Real FairFare screenshots (if available)
 
 ### P2 (Nice to Have)
 - [ ] Blog/Resources section
 - [ ] Live chat integration
-- [ ] Project calculator/estimator
-- [ ] Animation refinements for mobile
+- [ ] Animation refinements
 
 ## Next Tasks
-1. Configure Resend API key (RESEND_API_KEY, RECIPIENT_EMAIL in backend/.env)
-2. Add real portfolio images/case studies
-3. Consider adding client testimonials
+1. Deploy to Netlify using settings above
+2. Test Netlify Forms submission in production
+3. Add more case studies with real project images
+4. Consider adding testimonials
