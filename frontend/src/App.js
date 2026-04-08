@@ -231,95 +231,14 @@ const Hero = () => {
                   
                   {/* Screen Container */}
                   <div className="bg-black rounded-[2.8rem] p-[2px]">
-                    <div className="relative w-[280px] h-[560px] lg:w-[300px] lg:h-[620px] rounded-[2.7rem] overflow-hidden bg-[#0a0a0f]">
-                      {/* Real App Interface - FairFare Style */}
-                      <div className="h-full flex flex-col">
-                        {/* Status Bar */}
-                        <div className="flex justify-between items-center px-6 pt-14 pb-2 text-white/80 text-xs">
-                          <span>9:41</span>
-                          <div className="flex items-center gap-1">
-                            <div className="w-4 h-2 border border-white/60 rounded-sm">
-                              <div className="w-3/4 h-full bg-white/60 rounded-sm"></div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* App Header */}
-                        <div className="px-5 pb-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-[#0D9488] to-[#0F766E] rounded-xl flex items-center justify-center">
-                              <Sparkles className="w-5 h-5 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-bold text-lg">FairFare</h3>
-                              <p className="text-white/50 text-xs">Compare & Save</p>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* Location Inputs */}
-                        <div className="px-5 space-y-2 mb-4">
-                          <div className="bg-[#1a1a24] rounded-xl p-3">
-                            <div className="text-white/40 text-[10px] mb-0.5">PICKUP</div>
-                            <div className="text-white text-sm font-medium">123 Main Street</div>
-                          </div>
-                          <div className="bg-[#1a1a24] rounded-xl p-3">
-                            <div className="text-white/40 text-[10px] mb-0.5">DESTINATION</div>
-                            <div className="text-white text-sm font-medium">Airport Terminal B</div>
-                          </div>
-                        </div>
-                        
-                        {/* Ride Options */}
-                        <div className="px-5 flex-1">
-                          <div className="text-white/50 text-xs mb-2 font-medium">BEST OPTIONS</div>
-                          <div className="space-y-2">
-                            {/* Best Option */}
-                            <div className="bg-[#0D9488]/20 border border-[#0D9488]/40 rounded-2xl p-3.5 flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white font-bold text-xs">UX</div>
-                                <div>
-                                  <div className="text-white font-semibold text-sm">Uber X</div>
-                                  <div className="text-white/50 text-xs">4 min • 4.9★</div>
-                                </div>
-                              </div>
-                              <div className="text-right">
-                                <div className="text-[#0D9488] font-bold text-lg">$18.50</div>
-                                <div className="text-[#0D9488] text-[10px] font-medium">BEST PRICE</div>
-                              </div>
-                            </div>
-                            
-                            {/* Other Options */}
-                            <div className="bg-[#1a1a24] rounded-2xl p-3.5 flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-[#FF00BF]/20 rounded-xl flex items-center justify-center text-[#FF00BF] font-bold text-xs">L</div>
-                                <div>
-                                  <div className="text-white font-semibold text-sm">Lyft</div>
-                                  <div className="text-white/50 text-xs">6 min • 4.8★</div>
-                                </div>
-                              </div>
-                              <div className="text-white font-bold">$19.20</div>
-                            </div>
-                            
-                            <div className="bg-[#1a1a24] rounded-2xl p-3.5 flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold text-xs">V</div>
-                                <div>
-                                  <div className="text-white font-semibold text-sm">Via</div>
-                                  <div className="text-white/50 text-xs">8 min • 4.7★</div>
-                                </div>
-                              </div>
-                              <div className="text-white font-bold">$21.00</div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* CTA Button */}
-                        <div className="p-5 pt-3">
-                          <button className="w-full bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white py-4 rounded-2xl font-semibold text-sm shadow-lg shadow-[#0D9488]/30">
-                            Book Uber X — $18.50
-                          </button>
-                        </div>
-                      </div>
+                    <div className="relative w-[280px] h-[560px] lg:w-[300px] lg:h-[620px] rounded-[2.7rem] overflow-hidden">
+                      {/* Real FairFare Screenshot */}
+                      <img 
+                        src="https://customer-assets.emergentagent.com/job_real-products/artifacts/ebpy2g2z_1000056758.jpeg"
+                        alt="FairFare App - Compare rideshare prices"
+                        className="w-full h-full object-cover object-top"
+                        data-testid="hero-product-screenshot"
+                      />
                     </div>
                   </div>
                   
@@ -350,7 +269,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <p className="text-xs text-slate-500 font-medium">You Save</p>
-                    <p className="text-xl font-bold text-[#0F172A]">$2.50</p>
+                    <p className="text-xl font-bold text-[#0F172A]">$5.75</p>
                   </div>
                 </div>
               </motion.div>
@@ -410,77 +329,48 @@ const FairFareCaseStudy = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-12 gap-8 items-center">
-            {/* Left - App Mockup */}
-            <motion.div variants={slideUp} className="lg:col-span-5">
-              <div className="relative">
-                <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-3xl p-6 border border-white/10">
-                  {/* Phone Frame */}
-                  <div className="bg-[#0F172A] rounded-[2rem] p-2 mx-auto max-w-[260px]">
-                    <div className="bg-[#1E293B] rounded-[1.75rem] overflow-hidden">
-                      {/* Status bar */}
-                      <div className="bg-[#0F172A] px-4 py-2 flex justify-between items-center">
-                        <span className="text-white/60 text-xs">9:41</span>
-                        <div className="flex gap-1">
-                          <div className="w-4 h-2 bg-white/60 rounded-sm"></div>
-                        </div>
+            {/* Left - Multiple App Screenshots */}
+            <motion.div variants={slideUp} className="lg:col-span-6">
+              <div className="relative flex justify-center gap-4">
+                {/* Main Screenshot */}
+                <div className="relative">
+                  <div className="bg-[#1a1a1a] rounded-[2.5rem] p-[3px] shadow-2xl">
+                    <div className="bg-black rounded-[2.3rem] p-[2px]">
+                      <div className="w-[220px] h-[440px] lg:w-[240px] lg:h-[480px] rounded-[2.2rem] overflow-hidden">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_real-products/artifacts/xc0r3lmj_1000056760.jpeg"
+                          alt="FairFare - Price Comparison"
+                          className="w-full h-full object-cover object-top"
+                        />
                       </div>
-                      
-                      {/* App Content */}
-                      <div className="p-4">
-                        <div className="flex items-center gap-2 mb-4">
-                          <div className="w-10 h-10 bg-[#0D9488] rounded-xl flex items-center justify-center">
-                            <Sparkles className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <div className="text-white font-bold">FairFare</div>
-                            <div className="text-white/50 text-xs">Compare & Save</div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-[#0F172A] rounded-xl p-3 mb-3">
-                          <div className="text-white/50 text-xs mb-1">From</div>
-                          <div className="text-white text-sm">123 Main Street</div>
-                        </div>
-                        
-                        <div className="bg-[#0F172A] rounded-xl p-3 mb-4">
-                          <div className="text-white/50 text-xs mb-1">To</div>
-                          <div className="text-white text-sm">Airport Terminal B</div>
-                        </div>
-                        
-                        <div className="space-y-2 mb-4">
-                          <div className="bg-[#0D9488]/20 border border-[#0D9488]/30 rounded-xl p-3 flex justify-between items-center">
-                            <div className="flex items-center gap-2">
-                              <div className="w-6 h-6 bg-[#0D9488] rounded-md"></div>
-                              <span className="text-white text-sm">Uber X</span>
-                            </div>
-                            <span className="text-[#0D9488] font-bold">$24.50</span>
-                          </div>
-                          <div className="bg-slate-700/30 rounded-xl p-3 flex justify-between items-center">
-                            <div className="flex items-center gap-2">
-                              <div className="w-6 h-6 bg-slate-600 rounded-md"></div>
-                              <span className="text-white/70 text-sm">Lyft</span>
-                            </div>
-                            <span className="text-white/70">$27.00</span>
-                          </div>
-                        </div>
-                        
-                        <button className="w-full bg-[#0D9488] text-white py-3 rounded-xl font-semibold text-sm">
-                          Book Best Price
-                        </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Secondary Screenshot - Offset */}
+                <div className="relative -mt-8 hidden lg:block">
+                  <div className="bg-[#1a1a1a] rounded-[2.5rem] p-[3px] shadow-2xl opacity-90">
+                    <div className="bg-black rounded-[2.3rem] p-[2px]">
+                      <div className="w-[200px] h-[400px] rounded-[2.2rem] overflow-hidden">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_real-products/artifacts/t3j1waf5_1000056764.jpeg"
+                          alt="FairFare - Booking Confirmation"
+                          className="w-full h-full object-cover object-top"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                {/* Floating badge */}
-                <div className="absolute -bottom-3 -right-3 bg-[#0D9488] text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
-                  Live Product
+                {/* Live Product Badge */}
+                <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#0D9488] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg z-10">
+                  Live on App Store
                 </div>
               </div>
             </motion.div>
 
             {/* Right - Content */}
-            <motion.div variants={slideUp} className="lg:col-span-7 lg:pl-8">
+            <motion.div variants={slideUp} className="lg:col-span-6">
               <div className="space-y-6">
                 <div>
                   <div className="text-[#0D9488] text-sm font-medium mb-1">Consumer Mobile App</div>
@@ -490,7 +380,7 @@ const FairFareCaseStudy = () => {
                   <p className="text-white/70 leading-relaxed">
                     Most users open one rideshare app at a time with no quick way to compare pricing. 
                     FairFare solves this by letting users check Uber, Lyft, and other options side-by-side 
-                    and choose the best ride before booking.
+                    and choose the best ride before booking — saving users an average of $5+ per ride.
                   </p>
                 </div>
 
@@ -498,8 +388,8 @@ const FairFareCaseStudy = () => {
                 <div className="grid grid-cols-3 gap-4 py-4 border-y border-white/10">
                   {[
                     { label: "Type", value: "Live Product" },
-                    { label: "Focus", value: "Consumer UX" },
-                    { label: "Status", value: "Deployed" }
+                    { label: "Avg Savings", value: "$5.75/ride" },
+                    { label: "Status", value: "App Store" }
                   ].map((stat) => (
                     <div key={stat.label}>
                       <div className="text-white/50 text-xs uppercase tracking-wider">{stat.label}</div>
