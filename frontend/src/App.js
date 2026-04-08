@@ -125,20 +125,24 @@ const Navigation = () => {
   );
 };
 
-// Hero Section - Simplified
+// Hero Section - Clean Studio Style
 const Hero = () => {
   return (
     <section className="min-h-[85vh] relative overflow-hidden" data-testid="hero-section">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50/30"></div>
+      
+      {/* Subtle background accents */}
+      <div className="absolute top-20 right-20 w-[300px] h-[300px] bg-[#0D9488]/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-[200px] h-[200px] bg-[#1E3A5F]/5 rounded-full blur-3xl"></div>
 
-      <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 lg:pt-32 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left - Content */}
+      <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 lg:pt-36 pb-20">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Left - Content (larger emphasis) */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-xl"
+            className="lg:col-span-7 max-w-2xl"
           >
             <motion.div variants={slideUp} className="mb-5">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#1E3A5F]/5 border border-[#1E3A5F]/10 rounded-full text-[#1E3A5F] text-sm font-medium">
@@ -149,7 +153,7 @@ const Hero = () => {
 
             <motion.h1 
               variants={slideUp}
-              className="text-[2.75rem] lg:text-[3.5rem] font-bold text-[#0F172A] leading-[1.08] tracking-[-0.03em] mb-5"
+              className="text-[3rem] lg:text-[4rem] font-bold text-[#0F172A] leading-[1.05] tracking-[-0.03em] mb-6"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               Turn Your Idea Into Reality
@@ -157,16 +161,16 @@ const Hero = () => {
 
             <motion.p 
               variants={slideUp}
-              className="text-lg text-slate-600 leading-relaxed mb-8 max-w-md"
+              className="text-xl text-slate-600 leading-relaxed mb-10 max-w-lg"
             >
               We build real, working products for business owners — fast, precise, and without complexity.
             </motion.p>
 
-            <motion.div variants={slideUp} className="flex flex-wrap gap-3 mb-12">
+            <motion.div variants={slideUp} className="flex flex-wrap gap-3 mb-14">
               <Button
                 asChild
                 size="lg"
-                className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-7 h-12 text-base font-medium rounded-full shadow-lg shadow-[#0D9488]/20"
+                className="bg-[#0D9488] hover:bg-[#0F766E] text-white px-8 h-13 text-base font-medium rounded-full shadow-lg shadow-[#0D9488]/20"
                 data-testid="hero-cta-primary"
               >
                 <a href="#contact">
@@ -178,7 +182,7 @@ const Hero = () => {
                 asChild
                 variant="ghost"
                 size="lg"
-                className="text-[#1E3A5F] hover:bg-[#1E3A5F]/5 px-7 h-12 text-base font-medium rounded-full"
+                className="text-[#1E3A5F] hover:bg-[#1E3A5F]/5 px-8 h-13 text-base font-medium rounded-full"
                 data-testid="hero-cta-secondary"
               >
                 <a href="#work">View Our Work</a>
@@ -193,31 +197,97 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right - Smaller Product Visual */}
+          {/* Right - Subtle Multi-Product Visual */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={slideLeft}
-            className="relative flex justify-center lg:justify-end"
+            className="lg:col-span-5 hidden lg:block"
           >
             <div className="relative">
-              {/* Smaller iPhone Frame */}
-              <div className="relative bg-[#1a1a1a] rounded-[2.5rem] p-[2px] shadow-2xl shadow-black/20">
-                <div className="bg-black rounded-[2.4rem] p-[2px]">
-                  <div className="w-[220px] h-[440px] lg:w-[240px] lg:h-[480px] rounded-[2.3rem] overflow-hidden">
-                    <img 
-                      src="https://customer-assets.emergentagent.com/job_real-products/artifacts/ebpy2g2z_1000056758.jpeg"
-                      alt="FairFare App"
-                      className="w-full h-full object-cover object-top"
-                      data-testid="hero-product-screenshot"
-                    />
+              {/* Stacked UI Panels - Abstract Product Representation */}
+              <div className="relative h-[420px]">
+                {/* Dashboard Panel - Back */}
+                <motion.div 
+                  className="absolute top-0 right-0 w-[280px] bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden"
+                  initial={{ opacity: 0, y: 20, rotate: 3 }}
+                  animate={{ opacity: 1, y: 0, rotate: 3 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                >
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-2 h-2 rounded-full bg-red-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-green-400"></div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="h-3 bg-slate-100 rounded w-2/3"></div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="h-16 bg-[#1E3A5F]/5 rounded-lg"></div>
+                        <div className="h-16 bg-[#0D9488]/10 rounded-lg"></div>
+                        <div className="h-16 bg-slate-50 rounded-lg"></div>
+                      </div>
+                      <div className="h-20 bg-slate-50 rounded-lg"></div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              
-              {/* Simple badge */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#0F172A] text-white px-4 py-1.5 rounded-full text-xs font-medium shadow-lg">
-                Live Product
+                </motion.div>
+
+                {/* Mobile App Panel - Middle */}
+                <motion.div 
+                  className="absolute top-16 left-8 w-[140px] bg-[#0F172A] rounded-2xl shadow-2xl overflow-hidden"
+                  initial={{ opacity: 0, y: 30, rotate: -6 }}
+                  animate={{ opacity: 1, y: 0, rotate: -6 }}
+                  transition={{ delay: 0.5, duration: 0.6 }}
+                >
+                  <div className="p-3">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-6 h-6 bg-[#0D9488] rounded-lg"></div>
+                      <div className="h-2 bg-white/20 rounded w-12"></div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-white/10 rounded w-full"></div>
+                      <div className="h-2 bg-white/10 rounded w-3/4"></div>
+                      <div className="h-8 bg-[#0D9488]/30 rounded-lg mt-3"></div>
+                      <div className="h-8 bg-white/5 rounded-lg"></div>
+                      <div className="h-8 bg-white/5 rounded-lg"></div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Website Panel - Front */}
+                <motion.div 
+                  className="absolute bottom-0 left-0 w-[240px] bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden"
+                  initial={{ opacity: 0, y: 40, rotate: 2 }}
+                  animate={{ opacity: 1, y: 0, rotate: 2 }}
+                  transition={{ delay: 0.7, duration: 0.6 }}
+                >
+                  <div className="h-6 bg-slate-50 border-b border-slate-100 flex items-center px-3 gap-1.5">
+                    <div className="w-2 h-2 rounded-full bg-slate-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-slate-200"></div>
+                    <div className="w-2 h-2 rounded-full bg-slate-200"></div>
+                  </div>
+                  <div className="p-4">
+                    <div className="h-3 bg-[#1E3A5F] rounded w-1/3 mb-3"></div>
+                    <div className="space-y-2 mb-4">
+                      <div className="h-2 bg-slate-100 rounded w-full"></div>
+                      <div className="h-2 bg-slate-100 rounded w-4/5"></div>
+                    </div>
+                    <div className="flex gap-2">
+                      <div className="h-7 bg-[#0D9488] rounded-full w-16"></div>
+                      <div className="h-7 bg-slate-100 rounded-full w-12"></div>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Small floating accent */}
+                <motion.div 
+                  className="absolute top-32 right-16 px-3 py-1.5 bg-[#0D9488] rounded-full text-white text-xs font-medium shadow-lg"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1, duration: 0.4 }}
+                >
+                  Live
+                </motion.div>
               </div>
             </div>
           </motion.div>
