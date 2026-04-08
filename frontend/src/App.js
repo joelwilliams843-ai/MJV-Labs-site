@@ -211,102 +211,168 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Hero Visual - Product UI Mockup */}
+          {/* Hero Visual - Real Product in Device Frame */}
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={slideLeft}
             className="relative lg:pl-8"
           >
-            <div className="relative">
-              {/* Main App Screen */}
+            <div className="relative flex justify-center">
+              {/* iPhone Device Frame */}
               <motion.div 
                 style={{ y: y1 }}
-                className="relative z-10 bg-[#0F172A] rounded-3xl p-4 shadow-2xl shadow-slate-900/20"
+                className="relative z-10"
               >
-                <div className="bg-[#1E293B] rounded-2xl overflow-hidden">
-                  {/* App Header */}
-                  <div className="bg-[#0F172A] px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-[#0D9488] rounded-lg flex items-center justify-center">
-                        <Sparkles className="w-4 h-4 text-white" />
+                {/* iPhone 15 Pro Style Frame */}
+                <div className="relative bg-[#1a1a1a] rounded-[3rem] p-[3px] shadow-2xl shadow-black/30">
+                  {/* Dynamic Island */}
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30"></div>
+                  
+                  {/* Screen Container */}
+                  <div className="bg-black rounded-[2.8rem] p-[2px]">
+                    <div className="relative w-[280px] h-[560px] lg:w-[300px] lg:h-[620px] rounded-[2.7rem] overflow-hidden bg-[#0a0a0f]">
+                      {/* Real App Interface - FairFare Style */}
+                      <div className="h-full flex flex-col">
+                        {/* Status Bar */}
+                        <div className="flex justify-between items-center px-6 pt-14 pb-2 text-white/80 text-xs">
+                          <span>9:41</span>
+                          <div className="flex items-center gap-1">
+                            <div className="w-4 h-2 border border-white/60 rounded-sm">
+                              <div className="w-3/4 h-full bg-white/60 rounded-sm"></div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* App Header */}
+                        <div className="px-5 pb-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-gradient-to-br from-[#0D9488] to-[#0F766E] rounded-xl flex items-center justify-center">
+                              <Sparkles className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-white font-bold text-lg">FairFare</h3>
+                              <p className="text-white/50 text-xs">Compare & Save</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Location Inputs */}
+                        <div className="px-5 space-y-2 mb-4">
+                          <div className="bg-[#1a1a24] rounded-xl p-3">
+                            <div className="text-white/40 text-[10px] mb-0.5">PICKUP</div>
+                            <div className="text-white text-sm font-medium">123 Main Street</div>
+                          </div>
+                          <div className="bg-[#1a1a24] rounded-xl p-3">
+                            <div className="text-white/40 text-[10px] mb-0.5">DESTINATION</div>
+                            <div className="text-white text-sm font-medium">Airport Terminal B</div>
+                          </div>
+                        </div>
+                        
+                        {/* Ride Options */}
+                        <div className="px-5 flex-1">
+                          <div className="text-white/50 text-xs mb-2 font-medium">BEST OPTIONS</div>
+                          <div className="space-y-2">
+                            {/* Best Option */}
+                            <div className="bg-[#0D9488]/20 border border-[#0D9488]/40 rounded-2xl p-3.5 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white font-bold text-xs">UX</div>
+                                <div>
+                                  <div className="text-white font-semibold text-sm">Uber X</div>
+                                  <div className="text-white/50 text-xs">4 min • 4.9★</div>
+                                </div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-[#0D9488] font-bold text-lg">$18.50</div>
+                                <div className="text-[#0D9488] text-[10px] font-medium">BEST PRICE</div>
+                              </div>
+                            </div>
+                            
+                            {/* Other Options */}
+                            <div className="bg-[#1a1a24] rounded-2xl p-3.5 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-[#FF00BF]/20 rounded-xl flex items-center justify-center text-[#FF00BF] font-bold text-xs">L</div>
+                                <div>
+                                  <div className="text-white font-semibold text-sm">Lyft</div>
+                                  <div className="text-white/50 text-xs">6 min • 4.8★</div>
+                                </div>
+                              </div>
+                              <div className="text-white font-bold">$19.20</div>
+                            </div>
+                            
+                            <div className="bg-[#1a1a24] rounded-2xl p-3.5 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400 font-bold text-xs">V</div>
+                                <div>
+                                  <div className="text-white font-semibold text-sm">Via</div>
+                                  <div className="text-white/50 text-xs">8 min • 4.7★</div>
+                                </div>
+                              </div>
+                              <div className="text-white font-bold">$21.00</div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* CTA Button */}
+                        <div className="p-5 pt-3">
+                          <button className="w-full bg-gradient-to-r from-[#0D9488] to-[#0F766E] text-white py-4 rounded-2xl font-semibold text-sm shadow-lg shadow-[#0D9488]/30">
+                            Book Uber X — $18.50
+                          </button>
+                        </div>
                       </div>
-                      <span className="text-white font-semibold text-sm">FairFare</span>
-                    </div>
-                    <div className="flex gap-1">
-                      <div className="w-2 h-2 rounded-full bg-slate-600"></div>
-                      <div className="w-2 h-2 rounded-full bg-slate-600"></div>
-                      <div className="w-2 h-2 rounded-full bg-slate-600"></div>
                     </div>
                   </div>
                   
-                  {/* App Content */}
-                  <div className="p-4 space-y-3">
-                    <div className="text-white/60 text-xs">Compare rides instantly</div>
-                    <div className="space-y-2">
-                      {[
-                        { name: "Uber X", price: "$18.50", time: "4 min", best: true },
-                        { name: "Lyft", price: "$19.20", time: "6 min", best: false },
-                        { name: "Via", price: "$21.00", time: "8 min", best: false }
-                      ].map((ride) => (
-                        <div 
-                          key={ride.name}
-                          className={`p-3 rounded-xl flex items-center justify-between ${
-                            ride.best ? 'bg-[#0D9488]/20 border border-[#0D9488]/30' : 'bg-slate-700/30'
-                          }`}
-                        >
-                          <div className="flex items-center gap-3">
-                            <div className={`w-8 h-8 rounded-lg ${ride.best ? 'bg-[#0D9488]' : 'bg-slate-600'}`}></div>
-                            <div>
-                              <div className="text-white text-sm font-medium">{ride.name}</div>
-                              <div className="text-white/50 text-xs">{ride.time} away</div>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className={`font-bold ${ride.best ? 'text-[#0D9488]' : 'text-white'}`}>{ride.price}</div>
-                            {ride.best && <div className="text-[#0D9488] text-xs">Best price</div>}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <button className="w-full bg-[#0D9488] text-white py-3 rounded-xl font-medium text-sm mt-2">
-                      Book Best Ride
-                    </button>
-                  </div>
+                  {/* Side Buttons */}
+                  <div className="absolute right-[-2px] top-32 w-[3px] h-14 bg-[#2a2a2a] rounded-l-sm"></div>
+                  <div className="absolute left-[-2px] top-28 w-[3px] h-7 bg-[#2a2a2a] rounded-r-sm"></div>
+                  <div className="absolute left-[-2px] top-40 w-[3px] h-12 bg-[#2a2a2a] rounded-r-sm"></div>
+                </div>
+                
+                {/* "Live Product" Badge */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#0D9488] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg shadow-[#0D9488]/30 flex items-center gap-2 z-20">
+                  <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                  Live Product
                 </div>
               </motion.div>
 
-              {/* Floating Stats */}
+              {/* Floating Stats Card */}
               <motion.div 
                 style={{ y: y2 }}
-                className="absolute -top-2 -right-4 lg:-right-8 bg-white rounded-xl p-3 shadow-xl border border-slate-100 z-20"
+                className="absolute top-12 -right-2 lg:right-4 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 z-20"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                    <Check className="w-4 h-4 text-green-600" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
+                    <Check className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-500">Saved</p>
-                    <p className="text-base font-bold text-[#0F172A]">$4.70</p>
+                    <p className="text-xs text-slate-500 font-medium">You Save</p>
+                    <p className="text-xl font-bold text-[#0F172A]">$2.50</p>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Floating Code */}
+              {/* Floating Deploy Status */}
               <motion.div 
-                className="absolute -bottom-4 -left-4 lg:-left-8 bg-[#0F172A] rounded-lg p-3 shadow-xl z-20"
+                className="absolute bottom-24 -left-2 lg:left-4 bg-[#0F172A] rounded-xl p-3 shadow-xl z-20"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.7, duration: 0.5 }}
               >
-                <div className="font-mono text-xs">
-                  <div className="text-slate-400">$ deploying...</div>
-                  <div className="text-[#0D9488]">✓ Live in production</div>
+                <div className="font-mono text-xs space-y-1">
+                  <div className="text-slate-400">$ vercel deploy</div>
+                  <div className="text-[#0D9488] flex items-center gap-1.5">
+                    <Check className="w-3 h-3" />
+                    Production ready
+                  </div>
                 </div>
               </motion.div>
+
+              {/* Background Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#0D9488]/10 rounded-full blur-3xl -z-10"></div>
             </div>
           </motion.div>
         </div>
